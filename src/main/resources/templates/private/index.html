@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>NinBooru | A Imageboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple imageboard"/>
+	<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="SHORTCUT ICON" href="/icon/favicon.png" />
+  </head>
+  <body>
+  
+  <header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+	           <form th:action="@{/logout}" id="cerrar_sesion" method="post" >
+		          <a href="javascript:{}" class="nav-link" aria-current="page"
+		           onclick="document.getElementById('cerrar_sesion').submit();">Cerrar Sesion</a>
+		      </form>
+		          
+          </li>
+          <li class="nav-item">
+		     		 <span th:if="${session.usuario!=null} " class="nav-link" >Bienvenid@
+							<span th:text="${session.usuario.nombre}"></span>
+					</span>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+</header>
+    <!--  
+<header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="
+	background-color: #0773fb;">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Nin Image Board</a>
+
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+	  
+
+
+      
+    </div>
+  </div>
+</header>
+	-->
+	<div class="contenedor" >
+			<div class="hijo">
+				<div>
+					<a href="#">
+						<img id="img" class="logo" src="/img/logo.png">
+					</a>
+				</div>
+				<div class="links">
+					<a href="/public/posts"> Browse</a>
+					<a href="#"> Comments</a>
+					<a href="/private/index/user">My Profile</a>
+					<a href="#">Forum</a>
+					<a href="#">&raquo;</a>
+				</div>
+				<div>
+					<form>
+						<input type="text"  placeholder="Buscar.." name="buscador" class="buscador">
+						<input type="submit" value="Buscar" class="button-search">
+					</form>
+				</div>
+				
+				<div>
+					<span>Serving</span>
+					<span>0</span>
+					<span>posts</span>
+				</div>
+				
+				<div>
+					<img id="img" src="/img/counter/0.gif" border="0">
+				</div>
+				<div>
+					<small>Numero de visitantes: </small>
+					</br>
+					<small>Running NinBooru 0.0.1</small>
+				</div>
+				
+			</div>
+		</div>
+		
+		<script>
+		document.getElementById("img").addEventListener("contextmenu", function(event){event.preventDefault()});
+		</script>
+
+
+
+  </body>
+</html>

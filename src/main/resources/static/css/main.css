@@ -1,0 +1,58 @@
+body{
+	margin:0;
+	padding:0;
+}
+.contenedor{
+	background-color: transparent;
+	/*
+	width:100vw;
+	*/
+	height:100vh; 
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+		
+}
+
+.hijo{
+	background: transparent;
+	width: 600px;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	display: inline-block;
+	text-align:center;
+
+}
+.logo{
+	height:30%;
+	width:100%;
+	
+}
+.buscador{
+	padding:5px;
+	width:50%;
+}
+.button-search{
+	padding:5px;
+	background-color:#0773fb;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	border-width:0px;
+	border-radius: 4px;
+}
+.links a {
+	text-decoration: none;
+	color: #006FFA;
+	margin: 0 0.5em;
+	/*
+		em, relativa respecto del tamaño de letra del elemento.
+		ex, relativa respecto de la altura de la letra x ("equis minúscula") del tipo y tamaño de letra del elemento.
+		px, (píxel) relativa respecto de la resolución de la pantalla del dispositivo en el que se visualiza la página HTML.
+	*/
+}
+.links {	
+	margin-top:20px;
+}

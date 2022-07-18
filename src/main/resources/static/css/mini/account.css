@@ -1,0 +1,17 @@
+.options{
+	margin:30px;
+	padding:30px;
+	background-color:white;
+	text-align: center;
+	display: inline
+}
+
+.options a{
+	margin: 0 0.5em;
+	background-color: #0773fb;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	padding:10px;
+	text-decoration: none;
+}

@@ -1,0 +1,53 @@
+body,html{
+    margin: 0;
+    padding: 0;	
+	display: flex;
+    flex-direction: column;
+	height:vh;
+	
+}
+div{
+    display: block;
+}
+div{
+    display: block;
+}
+.pagename{
+	font-family: verdana, sans-serif;
+	background-color: #fff;
+	padding: 8px;
+}
+.pagename a{
+	font-family: Tahoma;
+	text-decoration: none;
+	font-weight: bold;
+	width:100vw;
+	color: blue;
+}
+
+.pagename a:visited {
+	font-family: Tahoma;
+	text-decoration: none;
+	font-weight: bold;
+	width:100vw;
+	
+	color: blue;
+}
+
+.pages{
+	padding: 4px;
+	background-color:#0773fb;
+	color: #fff;
+}
+.pages a{
+	margin: 0 0.5em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+}
+.pages a:hover{
+	background-color: #fff;
+	color:black;
+	padding-top:10px;
+	padding-bottom:10px;
+}
