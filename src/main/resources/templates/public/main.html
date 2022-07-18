@@ -41,7 +41,16 @@
 				</div>
 				
 				<div>
-					<img id="img" src="/img/counter/0.gif" border="0">
+					<div th:if="${not #lists.isEmpty(img_counter)}">
+						<tbody>
+							<tr th:each="img_counter : ${img_counter}">
+								<img id="img" th:src="${img_counter}" border="0">
+
+					      	 </tr>
+						 </tbody>
+					</div>
+					
+			
 				</div>
 				<div>
 					<small>Numero de visitantes: </small>

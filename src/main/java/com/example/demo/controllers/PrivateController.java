@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.models.entity.Usuario;
+import com.example.demo.models.service.IPostService;
 import com.example.demo.models.service.IUsuarioService;
 
 @Controller
@@ -43,15 +44,18 @@ public class PrivateController {
 	@Autowired
 	private IUsuarioService usuarioService;
 
+	@Autowired
+	IPostService postService;
+	
 	/**
 	 * Pre:
 	 * Post: Metodo el cual devuelve index con todos sus datos
 	 */
 	@GetMapping("/index")
 	public String index(Authentication auth, HttpSession session,Model model) {
-
 		session = session(auth,session);
 
+		model.addAttribute("count_post",postService.getCountPosts());
 		return "private/index";
 	}
 	
