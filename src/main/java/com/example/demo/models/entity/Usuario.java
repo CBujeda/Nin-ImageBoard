@@ -24,6 +24,7 @@ public class Usuario implements Serializable {
 	private String email;
 	private String username;
 	private String password;
+	private int rol;
 	private boolean verify;
 	
 	@OneToMany(mappedBy = "usuario",orphanRemoval = true)   
@@ -33,7 +34,7 @@ public class Usuario implements Serializable {
 		super();
 	}
 
-	public Usuario(Long id, String nombre, String apellido, String email, String username, String password,
+	public Usuario(Long id, String nombre, String apellido, String email, String username, String password, int rol,
 			boolean verify, Set<Post> postList) {
 		super();
 		this.id = id;
@@ -42,6 +43,7 @@ public class Usuario implements Serializable {
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		this.rol = rol;
 		this.verify = verify;
 		this.postList = postList;
 	}
@@ -94,6 +96,14 @@ public class Usuario implements Serializable {
 		this.password = password;
 	}
 
+	public int getRol() {
+		return rol;
+	}
+
+	public void setRol(int rol) {
+		this.rol = rol;
+	}
+
 	public boolean isVerify() {
 		return verify;
 	}
@@ -113,6 +123,8 @@ public class Usuario implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	
 	
 	
 	

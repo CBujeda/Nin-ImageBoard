@@ -48,12 +48,8 @@ public class LoginController {
 		Usuario user;
 		try {
 			user = usuarioService.findByUsername(usuario.getUsername());
-			if (user !=null) {
-				return "redirect:/auth/registro?error=true";
-			}
-		}catch(Exception e) {
-			return "redirect:/auth/registro?error=true";
-		}
+			if (user !=null) {return "redirect:/auth/registro?error=true";}
+		}catch(Exception e) {return "redirect:/auth/registro?error=true";}
     	 if(result.hasErrors()) {
  			return "redirect:/auth/registro";
  		}else {
@@ -67,6 +63,7 @@ public class LoginController {
 	 					 usuario.getEmail().contains("@") && 
 	 					 !usuario.getEmail().equalsIgnoreCase("") ){
  					usuario.setVerify(false);
+ 					usuario.setRol(0);
  					usuarioService.registrar(usuario);
  					
  					model.addAttribute("usuario", usuario);

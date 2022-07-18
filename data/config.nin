@@ -1,0 +1,5 @@
+#Configuracion de Nin ImageBoard
+name: NinBooru
+api:false
+#Ubicacion de la BBDD de archivos
+file_db:.

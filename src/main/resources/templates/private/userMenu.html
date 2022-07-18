@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>NinBooru | A Imageboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple imageboard"/>
+	<link rel="stylesheet" type="text/css" href="/css/header.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+	<link rel="SHORTCUT ICON" href="/icon/favicon.png" />
+		
+	</head>
+	
+	
+	<body>
+		<div id="head">
+			<div class="pagename">
+				<a href="/private/index">NinBooru</a>
+			</div>
+			<div class="pages">
+				<a href="#" class="selectedpage" >My profile</a>
+				<a href="/private/posts" >Posts </a>
+				<a href="#">Tags</a>
+				<a href="#">Help</a>
+				<a href="javascript:{}" aria-current="page"
+		           onclick="document.getElementById('cerrar_sesion').submit();">Cerrar Sesion</a>
+				<form th:action="@{/logout}" id="cerrar_sesion" method="post" ></form>
+			</div>
+			
+			<div class="pages2">
+				<a href="#" class="selectedpage2">User</a>
+				<a href="#" class="pages2_nona">New Post</a>
+				<a href="#" class="pages2_nona">My Posts</a>
+
+			</div>
+		</div>
+		<div class="contentUser">
+			
+			<div class="userblockimage">
+				<a class="userimage" href="#">
+					<img src="https://safebooru.org//samples/3905/sample_8d836a3a2994b1a5f354cccf0998de09098706a5.jpg" 
+					alt=" user_image " border="0" title=" title" class="preview ">
+				</a>
+			</div>
+			<div>
+				<div>Username</div>
+			
+			</div>
+		</div>
+
+	
+	</body>
+
+
+
+
+</html>

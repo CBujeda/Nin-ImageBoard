@@ -75,9 +75,29 @@
 .linkItem{
 	text-decoration: none;
 }
-
-
-
+/*User*/
+.userimage{
+  display: inline-block;
+  padding:5px;
+  box-sizing: border-box;
+  float:left;
+  width:150px;
+  height:150px;
+  border-style: solid;
+  text-align: center;
+}
+.userimage img{
+  object-fit: cover;
+  /*width:100%;*/
+  height:100%;
+}
+.userblockimage{
+	margin-left:10px;
+	
+}
+.contentUser{
+	
+}
 /*Pagination*/
 .bloque{
 	background-color:transparent;
@@ -123,3 +143,4 @@
 .ttdi{
 	margin-top: 10px;
 }
+

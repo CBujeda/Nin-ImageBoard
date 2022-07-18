@@ -16,13 +16,16 @@
 	<body>
 		<div id="head">
 			<div class="pagename">
-				<a href="/">NinBooru<a>
+				<a href="/private/index">NinBooru</a>
 			</div>
 			<div class="pages">
-				<a href="/public/prelog">My Account</a>
-				<a href="#">Posts </a>
+				<a href="/private/profile">My profile</a>
+				<a href="#" class="selectedpage">Posts </a>
 				<a href="#">Tags</a>
 				<a href="#">Help</a>
+				<a href="javascript:{}" aria-current="page"
+		           onclick="document.getElementById('cerrar_sesion').submit();">Cerrar Sesion</a>
+				<form th:action="@{/logout}" id="cerrar_sesion" method="post" ></form>
 			</div>
 		</div>
 		<div id="content" class="content">

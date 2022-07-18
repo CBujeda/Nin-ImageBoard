@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.controllers.csprivate;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,7 +27,8 @@ import com.example.demo.models.service.IUsuarioService;
 
 @Controller
 @RequestMapping("/private")
-public class PrivateController {
+public class NewDataController {
+	
 	private HttpSession session(Authentication auth, HttpSession session) {
 		String username = auth.getName();
 		if(session.getAttribute("usuario") == null) {
@@ -47,28 +48,11 @@ public class PrivateController {
 	 * Pre:
 	 * Post: Metodo el cual devuelve index con todos sus datos
 	 */
-	@GetMapping("/index")
+	/*
+	@GetMapping("/profile/newTag")
 	public String index(Authentication auth, HttpSession session,Model model) {
-
-		session = session(auth,session);
-
-		return "private/index";
-	}
-	
-	
-	@GetMapping("/profile")
-	public String posts(Authentication auth, HttpSession session,Model model) {
-
-		session = session(auth,session);
-
-		return "private/userMenu";
-	}
-	
-	@GetMapping("/posts")
-	public String userprofile(Authentication auth, HttpSession session,Model model) {
-
-		session = session(auth,session);
-
-		return "private/posts";
-	}
+		session = session(auth, session);
+		return "private/profile/";
+	}*/
+		
 }

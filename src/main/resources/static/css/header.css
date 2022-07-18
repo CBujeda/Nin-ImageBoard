@@ -1,3 +1,5 @@
+/* Special */
+
 body,html{
     margin: 0;
     padding: 0;	
@@ -51,3 +53,52 @@ div{
 	padding-top:10px;
 	padding-bottom:10px;
 }
+
+/* selected */
+.pages2{
+	padding: 4px;
+	margin-top:5px;
+	padding-top:0px;
+	background-color:#fff;
+}
+.pages2_nona{
+	margin: 0 0.5em;
+	padding-left:2px;
+	padding-right:2px;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #0773fb;
+	color: white;
+}
+
+.pages2_nona:hover{
+	margin: 0 0.5em;
+	padding-left:2px;
+	padding-right:2px;
+	padding-button:2px;
+	padding-top:1px;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #00188d;
+	color: white;
+}
+
+.selectedpage2{
+	margin: 0 0.5em;
+	padding-left:2px;
+	padding-right:2px;
+	padding-button:2px;
+	padding-top:1px;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #00188d;
+	color: white;
+}
+
+.selectedpage{
+	background-color: #00188d;
+    border-radius: 10px;
+	color:black;
+	padding: 4px;
+}
+
