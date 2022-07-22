@@ -102,3 +102,32 @@ div{
 	padding: 4px;
 }
 
+
+
+
+.pages3{
+	padding: 4px;
+	background-color:#dfdfdf;
+	color: #fff;
+	/*text-align: center;*/
+}
+.pages3_a{
+	background-color:#3a3a3a;
+	margin: 0 0.5em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+}
+.pages3 a:hover{
+	background-color: #fff;
+	color:black;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.selectedpage3{
+	background-color:#ff0080;
+	margin: 0 0.5em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+}

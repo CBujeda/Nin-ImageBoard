@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.controllers.csprivate;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -23,12 +23,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.models.entity.Usuario;
-import com.example.demo.models.service.IPostService;
 import com.example.demo.models.service.IUsuarioService;
 
 @Controller
 @RequestMapping("/private")
-public class PrivateController {
+public class AdminController {
+	
 	private HttpSession session(Authentication auth, HttpSession session) {
 		String username = auth.getName();
 		if(session.getAttribute("usuario") == null) {
@@ -44,32 +44,9 @@ public class PrivateController {
 	@Autowired
 	private IUsuarioService usuarioService;
 
-	@Autowired
-	IPostService postService;
 	
-	/**
-	 * Pre:
-	 * Post: Metodo el cual devuelve index con todos sus datos
-	 */
-	@GetMapping("/index")
-	public String index(Authentication auth, HttpSession session,Model model) {
-		session = session(auth,session);
-
-		model.addAttribute("count_post",postService.getCountPosts());
-		return "private/index";
-	}
-	
-	@GetMapping("/posts")
-	public String userprofile(Authentication auth, HttpSession session,Model model) {
-
-		session = session(auth,session);
-
-		return "private/posts";
-	}
-	
-	
-	@GetMapping("/profile")
-	public String posts(Authentication auth, HttpSession session,Model model) {
+	@GetMapping("/profile/admin")
+	public String admin(Authentication auth, HttpSession session,Model model) {
 		session = session(auth,session);
 		
 		String username = auth.getName();
@@ -77,23 +54,13 @@ public class PrivateController {
 		if(session.getAttribute("usuario") != null) {
 			usuario = usuarioService.findByUsername(username);
 			int ul = usuario.getRol();
-			if(ul == 5) {model.addAttribute("userlevel","lu5");}
-			
-			usuario.setPassword("");
-			model.addAttribute("usuario", usuario);
+			if(ul == 5) {
+				model.addAttribute("userlevel","lu5");
+				return "private/admin/adminPanel";
+			}
 		}
 
-		return "private/userMenu";
+		return "errors/error-denegated";
 	}
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
+		
 }

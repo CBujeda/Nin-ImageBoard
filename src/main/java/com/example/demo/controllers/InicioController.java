@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,12 +10,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.models.service.IPostService;
+import com.example.demo.controllers.config.ConfigController;
 
 @Controller
 public class InicioController {
 
 	@Autowired
 	IPostService postService;
+	
+	@Autowired
+	ConfigController configControll;
 	
 	@GetMapping("/")
 	public String inicio(Model model) {

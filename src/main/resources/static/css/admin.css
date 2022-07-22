@@ -1,0 +1,17 @@
+.webConfig{
+	border-style: solid;
+    padding:10px;
+	display:inline-block;
+	margin:10px;
+	text-align: center;
+}
+.webConfig p{
+	font-weight: bold;
+	background-color: #f3f3f3;
+}
+.contentAdminPanel{
+	margin:20px;
+}
+.webConfig input, .webConfig select{
+	margin: 10px;
+}

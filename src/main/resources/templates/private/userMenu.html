@@ -32,7 +32,9 @@
 				<a href="#" class="selectedpage2">User</a>
 				<a href="#" class="pages2_nona">New Post</a>
 				<a href="#" class="pages2_nona">My Posts</a>
-
+				<div th:if="${userlevel == 'lu5'}" style="float:left">	
+					<a href="/private/profile/admin" class="pages2_nona"> Admin </a>
+				</div>
 			</div>
 		</div>
 		<div class="contentUser">
@@ -43,9 +45,36 @@
 					alt=" user_image " border="0" title=" title" class="preview ">
 				</a>
 			</div>
-			<div>
-				<div>Username</div>
-			
+			<div class="username">
+					<form novalidate="" autocomplete="off" th:action="@{/private/update/user/update}" th:object="${usuario}" method="post">
+					<div>
+						<label for="name">Nombre*</label>
+						<input id="name" placeholder="Modificar nombre" th:value="${usuario.nombre}" type="text" class="form-control" th:field="*{nombre}" name="name" value="" required>
+					</div>
+					<div>
+						<label for="name">Apellidos</label>
+						<input id="lastname" placeholder="Modificar apellidos" th:value="${usuario.apellido}" type="text" class="form-control" name="lastname" th:field="*{apellido}" value="" required>
+					</div>
+					<div>
+						<label for="email">E-Mail</label>
+						<input id="email" placeholder="Modificar e-Mail " th:value="${usuario.email}" type="email" class="form-control" name="email" value=""  th:field="*{email}" required>
+					</div>
+						
+					<div>
+						<label for="name">Nombre de usuario*</label>
+						<input id="user" placeholder="Modificar nombre de usuario " th:value="${usuario.username}" type="text" class="form-control" th:field="*{username}" name="user" readonly  >
+					</div>	
+					<div>
+						<label for="password">Contraseña*</label>
+						<input id="password" placeholder="Nueva contraseña"  type="password" class="form-control" name="password" th:field="*{password}" required>
+					</div>
+	
+					<div>
+						 <input type="submit" value="Actualizar"/>
+					</div>
+				
+				</form>
+
 			</div>
 		</div>
 
